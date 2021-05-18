@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF0E2DE02652D45300703734 /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E2DDF2652D45300703734 /* ColorGenerator.swift */; };
 		FF7495AE26529C9900B7C8FA /* DevMeetingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7495AD26529C9900B7C8FA /* DevMeetingApp.swift */; };
 		FF7495B026529C9900B7C8FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7495AF26529C9900B7C8FA /* ContentView.swift */; };
 		FF7495B226529C9B00B7C8FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF7495B126529C9B00B7C8FA /* Assets.xcassets */; };
 		FF7495B526529C9B00B7C8FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF7495B426529C9B00B7C8FA /* Preview Assets.xcassets */; };
+		FF7495BF2652A7BF00B7C8FA /* TeamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7495BE2652A7BF00B7C8FA /* TeamManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF0E2DDF2652D45300703734 /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
 		FF7495AA26529C9900B7C8FA /* DevMeeting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevMeeting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF7495AD26529C9900B7C8FA /* DevMeetingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevMeetingApp.swift; sourceTree = "<group>"; };
 		FF7495AF26529C9900B7C8FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -21,6 +24,7 @@
 		FF7495B426529C9B00B7C8FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FF7495B626529C9B00B7C8FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF7495B726529C9B00B7C8FA /* DevMeeting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DevMeeting.entitlements; sourceTree = "<group>"; };
+		FF7495BE2652A7BF00B7C8FA /* TeamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +57,10 @@
 		FF7495AC26529C9900B7C8FA /* DevMeeting */ = {
 			isa = PBXGroup;
 			children = (
-				FF7495AD26529C9900B7C8FA /* DevMeetingApp.swift */,
+				FF0E2DDF2652D45300703734 /* ColorGenerator.swift */,
 				FF7495AF26529C9900B7C8FA /* ContentView.swift */,
+				FF7495AD26529C9900B7C8FA /* DevMeetingApp.swift */,
+				FF7495BE2652A7BF00B7C8FA /* TeamManager.swift */,
 				FF7495B126529C9B00B7C8FA /* Assets.xcassets */,
 				FF7495B626529C9B00B7C8FA /* Info.plist */,
 				FF7495B726529C9B00B7C8FA /* DevMeeting.entitlements */,
@@ -141,7 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF7495B026529C9900B7C8FA /* ContentView.swift in Sources */,
+				FF0E2DE02652D45300703734 /* ColorGenerator.swift in Sources */,
 				FF7495AE26529C9900B7C8FA /* DevMeetingApp.swift in Sources */,
+				FF7495BF2652A7BF00B7C8FA /* TeamManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
