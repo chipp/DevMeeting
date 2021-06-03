@@ -17,6 +17,11 @@ final class TeamManager: ObservableObject {
         next()
     }
 
+    func updateDevelopers(_ developers: [Developer]) {
+        self.developers = developers.shuffled()
+        next()
+    }
+
     func next() {
         selectedDeveloper = developers.popLast()
     }
@@ -31,7 +36,7 @@ final class TeamManager: ObservableObject {
     }
 }
 
-struct Developer: Decodable, Identifiable {
+struct Developer: Codable, Identifiable {
     let firstName: String
     let lastName: String
     let nickname: String?
