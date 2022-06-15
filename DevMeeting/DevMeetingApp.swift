@@ -15,9 +15,9 @@ struct DevMeetingApp: App {
         teamManager = .init(developers: FileDataProvider.loadDevelopers())
     }
 
-    func importItem(_ item: DropInfo) {
-        guard let provider = item.itemProviders(for: [.fileURL]).first else {
-            return
+    func importItems(_ providers: [NSItemProvider]) -> Bool {
+        guard let provider = providers.first else {
+            return false
         }
 
         provider.loadDataRepresentation(forTypeIdentifier: UTType.fileURL.identifier) { data, error in
@@ -33,14 +33,14 @@ struct DevMeetingApp: App {
                 fatalError("\(error)")
             }
         }
+
+        return true
     }
 
     var content: some View {
-        let dropDelegate = DropTeamDelegate(isDropping: $isDropping, importItem: self.importItem(_:))
-
-        return ContentView()
-            .onDrop(of: [.fileURL], delegate: dropDelegate)
+        ContentView()
             .frame(width: 750, height: 400, alignment: .center)
+            .onDrop(of: [.fileURL], isTargeted: $isDropping, perform: self.importItems(_:))
             .environmentObject(teamManager)
     }
 
@@ -52,27 +52,5 @@ struct DevMeetingApp: App {
                 content
             }
         }
-    }
-}
-
-struct DropTeamDelegate: DropDelegate {
-    @Binding var isDropping: Bool
-    let importItem: (DropInfo) -> Void
-
-    func dropEntered(info: DropInfo) {
-        isDropping = true
-    }
-
-    func dropExited(info: DropInfo) {
-        isDropping = false
-    }
-
-    func performDrop(info: DropInfo) -> Bool {
-        defer {
-            importItem(info)
-        }
-
-        isDropping = false
-        return true
     }
 }

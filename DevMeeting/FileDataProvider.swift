@@ -24,6 +24,7 @@ enum FileDataProvider {
 
     static func loadDevelopers(from url: URL) -> [Developer] {
         do {
+            print(url)
             let data = try Data(contentsOf: url)
             return try PropertyListDecoder().decode([Developer].self, from: data)
         } catch {
